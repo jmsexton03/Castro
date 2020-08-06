@@ -1973,6 +1973,15 @@ Castro::post_timestep (int iteration)
           sum_integrated_quantities();
         }
 
+	//Replace with parameters: insitu.int insitu.start
+        int insitu_start = 0;
+        int insitu_int = 1;
+        bool do_insitu = ((nstep+1) >= insitu_start) &&
+            (insitu_int > 0) && ((nstep+1) % insitu_int == 0);
+
+        if(do_insitu)
+            updateInSitu();
+
 #ifdef GRAVITY
         if (moving_center) {
           write_center();

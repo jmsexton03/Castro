@@ -277,6 +277,17 @@ public:
 ///
     static void writeBuildInfo ();
 
+///
+/// Insitu update
+///
+    int updateInSitu ();
+
+///
+/// Conduit checkpoint file
+///
+#ifdef AMREX_USE_CONDUIT
+    void blueprintCheckpoint ();
+#endif
 
 ///
 /// Define data descriptors.

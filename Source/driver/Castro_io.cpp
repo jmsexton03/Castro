@@ -12,6 +12,14 @@
 #include "Castro.H"
 #include "Castro_F.H"
 #include "Castro_io.H"
+#ifdef AMREX_USE_CONDUIT
+#include <AMReX_Conduit_Blueprint.H>
+using namespace amrex;
+using namespace conduit;
+
+#include <ascent.hpp>
+using namespace ascent;
+#endif
 #include <AMReX_ParmParse.H>
 
 #ifdef RADIATION
@@ -1217,3 +1225,125 @@ Castro::plotFileOutput(const std::string& dir,
 #endif
 
 }
+
+int
+Castro::updateInSitu ()
+{
+#if defined(BL_USE_SENSEI_INSITU) || defined(AMREX_USE_ASCENT)
+    BL_PROFILE("Nyx::UpdateInSitu()");
+
+#if defined(BL_USE_SENSEI_INSITU)
+    if (insitu_bridge && insitu_bridge->update(this))
+    {
+        amrex::ErrorStream() << "Amr::updateInSitu : Failed to update." << std::endl;
+        amrex::Abort();
+    }
+#endif
+
+#ifdef AMREX_USE_CONDUIT
+    blueprintCheckpoint();
+#endif
+
+#endif
+    return 0;
+}
+
+#ifdef AMREX_USE_CONDUIT
+void
+Castro::blueprintCheckpoint ()
+{
+    const Real cur_time = state[State_Type].curTime();
+    int cycle = nStep();
+
+    conduit::Node bp_mesh;
+    Vector<std::string> varnames;
+
+    varnames.push_back("Density");
+    varnames.push_back("Xmom");
+    varnames.push_back("Ymom");
+    varnames.push_back("Zmom");
+    varnames.push_back("Eden");
+    varnames.push_back("Eint");
+
+    //Replace with descriptor-list names
+    for(int i=varnames.size();i<get_new_data(State_Type).nComp();i++)
+    {
+      varnames.push_back("variable"+std::to_string(i));
+    }
+
+    ///////////////////////////////////////////////////////////////////////////
+    // Wrap our AMReX Mesh into a Conduit Mesh Blueprint Tree
+    ///////////////////////////////////////////////////////////////////////////
+    SingleLevelToBlueprint(get_new_data(State_Type),
+                           varnames,
+                           geom,
+                           cur_time,
+                           cycle,
+                           bp_mesh);
+
+    /*
+    // Requires packing Vectors of pointers to AmrLevel state data, geometry, refinement ratio
+    MultiLevelToBlueprint( output_levs, 
+                           outputMF,
+                           varnames,
+                           geom,
+                           cur_time,
+                           level_cycle,
+                           outputRR,
+                           bp_mesh);
+    */
+    
+    // very helpful for debugging when we actual try
+    // to pull the varnames list from amrex, vs hand initing
+    //
+    // amrex::Print()<<varnames.size()<<S_new.nComp()<<std::endl;
+    // amrex::Print()<<particle_varnames.size()<<4<<std::endl;
+
+    ///////////////////////////////////////////////////////////////////////////
+    // Uncomment below to: 
+    // Save the Blueprint Mesh to a set of files that we can 
+    // view in VisIt. 
+    // (For debugging and to demonstrate how to do this w/o Ascent)
+    ///////////////////////////////////////////////////////////////////////////
+    //
+    // amrex::Print()<< "Exporting Conduit Blueprint HDF5 files (cycle="
+    //               << cycle <<")"
+    //               << std::endl;
+    
+    // WriteBlueprintFiles(bp_mesh,"bp_example_",cycle,"hdf5");
+
+    ///////////////////////////////////////////////////////////////////
+    // Render with Ascent
+    ///////////////////////////////////////////////////////////////////
+
+    if(verbose)
+        amrex::Print()<< "Executing Ascent (cycle="
+                      << cycle <<")"
+                      << std::endl;
+
+    Ascent ascent;
+    conduit::Node open_opts;
+    // tell ascent to use the ghost_indicator field to exclude ghosts
+
+    open_opts["ghost_field_name"] = "ghost_indicator";
+    
+#ifdef BL_USE_MPI
+    // if mpi, we need to provide the mpi comm to ascent
+    open_opts["mpi_comm"] = MPI_Comm_c2f(ParallelDescriptor::Communicator());
+#endif
+
+    ascent.open(open_opts);
+    // publish structured mesh to ascent
+    ascent.publish(bp_mesh);
+    
+    // call ascent, with empty actions.
+    // actions below will be overridden by those in
+    // ascent_actions.yaml
+    Node actions;
+    ascent.execute(actions);
+    ascent.close();
+
+
+
+}
+#endif
