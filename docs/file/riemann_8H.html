@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>File riemann.H &mdash; Castro  documentation</title>
   
@@ -17,7 +17,10 @@
 
   
   
+
   
+  
+
   
 
   
@@ -30,7 +33,6 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
         <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"kth": "{{k_\\mathrm{th}}}", "gcc": "{\\mathrm{g~cm^{-3}}}", "cms": "{\\mathrm{cm~s^{-1}}}", "presunit": "{\\mathrm{dyn~cm^{-2}}}", "accelunit": "{\\mathrm{cm~s^{-2}}}", "ergg": "{\\mathrm{erg~g^{-1}}}", "Ab": "{{\\bf A}}", "eb": "{{\\bf e}}", "Fb": "{{\\bf F}}", "gb": "{{\\bf g}}", "Hb": "{{\\bf H}}", "ib": "{{\\bf i}}", "Ib": "{{\\bf I}}", "Kb": "{{\\bf K}}", "lb": "{{\\bf l}}", "Lb": "{{\\bf L}}", "nb": "{{\\bf n}}", "Pb": "{{\\bf P}}", "Qb": "{{\\bf Q}}", "rb": "{{\\bf r}}", "Rb": "{{\\bf R}}", "Sb": "{{\\bf S}}", "ub": "{{\\bf u}}", "Ub": "{{\\bf U}}", "xb": "{{\\bf x}}", "dt": "{\\Delta t}", "omegadot": "{\\dot\\omega}", "inp": "{{\\rm in}}", "outp": "{{\\rm out}}", "sync": "{{\\rm sync}}", "half": "{\\frac{1}{2}}", "myhalf": "{\\half}", "nph": "{{n+\\myhalf}}", "kpp": "{\\ensuremath{\\kappa_{\\mathrm{P}}}}", "kpr": "{\\ensuremath{\\kappa_{\\mathrm{R}}}}", "kpf": "{\\ensuremath{\\kappa_{\\mathrm{F}}}}", "vb": "{\\boldsymbol{v}}", "vbt": "{\\widetilde{\\vb}}", "rbt": "{\\widetilde{\\rb}}", "ob": "{\\boldsymbol{\\omega}}", "nablab": "{\\boldsymbol{\\nabla}}", "avg": ["{{\\left \\langle #1 \\right \\rangle}}", 1]}}})</script>
     
@@ -39,7 +41,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="File slope.H" href="slope_8H.html" />
+    <link rel="next" title="File riemann_solvers.H" href="riemann__solvers_8H.html" />
     <link rel="prev" title="File reconstruction.H" href="reconstruction_8H.html" /> 
 </head>
 
@@ -55,7 +57,7 @@
 
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Castro
+            <a href="../index.html" class="icon icon-home"> Castro
           
 
           
@@ -141,11 +143,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../gravity_files.html">Gravity</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../hydro_files.html">Hydro</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="Castro__hydro_8H.html">File Castro_hydro.H</a></li>
+<li class="toctree-l3"><a class="reference internal" href="advection__util_8H.html">File advection_util.H</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fourth__center__average_8H.html">File fourth_center_average.H</a></li>
 <li class="toctree-l3"><a class="reference internal" href="hybrid_8H.html">File hybrid.H</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ppm_8H.html">File ppm.H</a></li>
 <li class="toctree-l3"><a class="reference internal" href="reconstruction_8H.html">File reconstruction.H</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">File riemann.H</a></li>
+<li class="toctree-l3"><a class="reference internal" href="riemann__solvers_8H.html">File riemann_solvers.H</a></li>
 <li class="toctree-l3"><a class="reference internal" href="slope_8H.html">File slope.H</a></li>
 </ul>
 </li>
@@ -205,6 +209,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -220,7 +226,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="../_sources/file/riemann_8H.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -264,24 +270,29 @@
 <dd></dd></dl>
 
 </div>
-<div class="breathe-sectiondef docutils container">
+<dl class="cpp type">
+<dt id="_CPPv417riemann_constants">
+<span id="_CPPv317riemann_constants"></span><span id="_CPPv217riemann_constants"></span><span id="riemann_constants"></span><span class="target" id="namespaceriemann__constants"></span><em class="property">namespace </em><code class="sig-name descname">riemann_constants</code><a class="headerlink" href="#_CPPv417riemann_constants" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Variables</p>
 <dl class="cpp var">
-<dt id="_CPPv45smlp1">
-<span id="_CPPv35smlp1"></span><span id="_CPPv25smlp1"></span><span id="smlp1__RealC"></span><span class="target" id="riemann_8H_1aacaaa15a61f3a5a5ba29f1e1b0ece0ba"></span><em class="property">const</em> Real <code class="sig-name descname">smlp1</code> = 1.e-10_rt<a class="headerlink" href="#_CPPv45smlp1" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N17riemann_constants5smlp1E">
+<span id="_CPPv3N17riemann_constants5smlp1E"></span><span id="_CPPv2N17riemann_constants5smlp1E"></span><span id="riemann_constants::smlp1__RealC"></span><span class="target" id="namespaceriemann__constants_1a439046008366826e123ece0adc3056ae"></span><em class="property">const</em> Real <code class="sig-name descname">smlp1</code> = 1.e-10_rt<a class="headerlink" href="#_CPPv4N17riemann_constants5smlp1E" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
-<dt id="_CPPv45small">
-<span id="_CPPv35small"></span><span id="_CPPv25small"></span><span id="small__RealC"></span><span class="target" id="riemann_8H_1ad49c8f6ceb32df0a69dbff2d7ab214ee"></span><em class="property">const</em> Real <code class="sig-name descname">small</code> = 1.e-8_rt<a class="headerlink" href="#_CPPv45small" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N17riemann_constants5smallE">
+<span id="_CPPv3N17riemann_constants5smallE"></span><span id="_CPPv2N17riemann_constants5smallE"></span><span id="riemann_constants::small__RealC"></span><span class="target" id="namespaceriemann__constants_1a183a445b41574c75eb29adc6f472e94d"></span><em class="property">const</em> Real <code class="sig-name descname">small</code> = 1.e-8_rt<a class="headerlink" href="#_CPPv4N17riemann_constants5smallE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
-<dt id="_CPPv46smallu">
-<span id="_CPPv36smallu"></span><span id="_CPPv26smallu"></span><span id="smallu__RealC"></span><span class="target" id="riemann_8H_1ab5a4f8f8cadcc9494a5f2f254ce2c916"></span><em class="property">const</em> Real <code class="sig-name descname">smallu</code> = 1.e-12_rt<a class="headerlink" href="#_CPPv46smallu" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N17riemann_constants6smalluE">
+<span id="_CPPv3N17riemann_constants6smalluE"></span><span id="_CPPv2N17riemann_constants6smalluE"></span><span id="riemann_constants::smallu__RealC"></span><span class="target" id="namespaceriemann__constants_1a0924d5a21198a82db79f6716507bbcca"></span><em class="property">const</em> Real <code class="sig-name descname">smallu</code> = 1.e-12_rt<a class="headerlink" href="#_CPPv4N17riemann_constants6smalluE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
+</dd></dl>
+
 </div>
 
 
@@ -289,37 +300,29 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="slope_8H.html" class="btn btn-neutral float-right" title="File slope.H" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="reconstruction_8H.html" class="btn btn-neutral float-left" title="File reconstruction.H" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="riemann__solvers_8H.html" class="btn btn-neutral float-right" title="File riemann_solvers.H" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="reconstruction_8H.html" class="btn btn-neutral float-left" title="File reconstruction.H" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2018-2020, Castro development tem
+        &#169; Copyright 2018-2020, Castro development tem.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

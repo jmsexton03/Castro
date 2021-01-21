@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Class HypreABec &mdash; Castro  documentation</title>
   
@@ -17,7 +17,10 @@
 
   
   
+
   
+  
+
   
 
   
@@ -30,7 +33,6 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
         <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"kth": "{{k_\\mathrm{th}}}", "gcc": "{\\mathrm{g~cm^{-3}}}", "cms": "{\\mathrm{cm~s^{-1}}}", "presunit": "{\\mathrm{dyn~cm^{-2}}}", "accelunit": "{\\mathrm{cm~s^{-2}}}", "ergg": "{\\mathrm{erg~g^{-1}}}", "Ab": "{{\\bf A}}", "eb": "{{\\bf e}}", "Fb": "{{\\bf F}}", "gb": "{{\\bf g}}", "Hb": "{{\\bf H}}", "ib": "{{\\bf i}}", "Ib": "{{\\bf I}}", "Kb": "{{\\bf K}}", "lb": "{{\\bf l}}", "Lb": "{{\\bf L}}", "nb": "{{\\bf n}}", "Pb": "{{\\bf P}}", "Qb": "{{\\bf Q}}", "rb": "{{\\bf r}}", "Rb": "{{\\bf R}}", "Sb": "{{\\bf S}}", "ub": "{{\\bf u}}", "Ub": "{{\\bf U}}", "xb": "{{\\bf x}}", "dt": "{\\Delta t}", "omegadot": "{\\dot\\omega}", "inp": "{{\\rm in}}", "outp": "{{\\rm out}}", "sync": "{{\\rm sync}}", "half": "{\\frac{1}{2}}", "myhalf": "{\\half}", "nph": "{{n+\\myhalf}}", "kpp": "{\\ensuremath{\\kappa_{\\mathrm{P}}}}", "kpr": "{\\ensuremath{\\kappa_{\\mathrm{R}}}}", "kpf": "{\\ensuremath{\\kappa_{\\mathrm{F}}}}", "vb": "{\\boldsymbol{v}}", "vbt": "{\\widetilde{\\vb}}", "rbt": "{\\widetilde{\\rb}}", "ob": "{\\boldsymbol{\\omega}}", "nablab": "{\\boldsymbol{\\nabla}}", "avg": ["{{\\left \\langle #1 \\right \\rangle}}", 1]}}})</script>
     
@@ -55,7 +57,7 @@
 
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Castro
+            <a href="../index.html" class="icon icon-home"> Castro
           
 
           
@@ -197,6 +199,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -210,7 +214,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="../_sources/class/classHypreABec.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -376,6 +380,26 @@
 </dd></dl>
 
 <dl class="cpp function">
+<dt id="_CPPv4N9HypreABec6hacoefERKN5amrex3BoxERKN5amrex6Array4IN5amrex8GpuArrayIN5amrex4RealEXpl14AMREX_SPACEDIML1EEEEEERKN5amrex6Array4IKN5amrex4RealEEEN5amrex4RealE">
+<span id="_CPPv3N9HypreABec6hacoefERKN5amrex3BoxERKN5amrex6Array4IN5amrex8GpuArrayIN5amrex4RealEXpl14AMREX_SPACEDIML1EEEEEERKN5amrex6Array4IKN5amrex4RealEEEN5amrex4RealE"></span><span id="_CPPv2N9HypreABec6hacoefERKN5amrex3BoxERKN5amrex6Array4IN5amrex8GpuArrayIN5amrex4RealEXAMREX_SPACEDIM + 1EEEEERKN5amrex6Array4IKN5amrex4RealEEEN5amrex4RealE"></span><span id="HypreABec::hacoef__amrex::BoxCR.amrex::Array4:amrex::GpuArray:amrex::Real.AMREX_SPACEDIM-+-1::CR.amrex::Array4:amrex::RealC:CR.amrex::Real"></span><span class="target" id="classHypreABec_1a57ea647ad2daa5fe1d926cc2627f8998"></span>void <code class="sig-name descname">hacoef</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Box &amp;<em>bx</em>, <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Array4&lt;<a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::GpuArray&lt;<a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Real, AMREX_SPACEDIM + 1&gt;&gt; <em class="property">const</em> &amp;<em>mat</em>, <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Array4&lt;<a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Real <em class="property">const</em>&gt; <em class="property">const</em> &amp;<em>a</em>, <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Real <em>alpha</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HypreABec6hacoefERKN5amrex3BoxERKN5amrex6Array4IN5amrex8GpuArrayIN5amrex4RealEXpl14AMREX_SPACEDIML1EEEEEERKN5amrex6Array4IKN5amrex4RealEEEN5amrex4RealE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N9HypreABec6hbcoefERKN5amrex3BoxERKN5amrex6Array4IN5amrex8GpuArrayIN5amrex4RealEXpl14AMREX_SPACEDIML1EEEEEERKN5amrex6Array4IKN5amrex4RealEEEN5amrex4RealEPKN5amrex4RealEi">
+<span id="_CPPv3N9HypreABec6hbcoefERKN5amrex3BoxERKN5amrex6Array4IN5amrex8GpuArrayIN5amrex4RealEXpl14AMREX_SPACEDIML1EEEEEERKN5amrex6Array4IKN5amrex4RealEEEN5amrex4RealEPKN5amrex4RealEi"></span><span id="_CPPv2N9HypreABec6hbcoefERKN5amrex3BoxERKN5amrex6Array4IN5amrex8GpuArrayIN5amrex4RealEXAMREX_SPACEDIM + 1EEEEERKN5amrex6Array4IKN5amrex4RealEEEN5amrex4RealEPKN5amrex4RealEi"></span><span id="HypreABec::hbcoef__amrex::BoxCR.amrex::Array4:amrex::GpuArray:amrex::Real.AMREX_SPACEDIM-+-1::CR.amrex::Array4:amrex::RealC:CR.amrex::Real.amrex::RealCP.i"></span><span class="target" id="classHypreABec_1a565fc4fa76fe0faf34676efb3e28f069"></span>void <code class="sig-name descname">hbcoef</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Box &amp;<em>bx</em>, <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Array4&lt;<a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::GpuArray&lt;<a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Real, AMREX_SPACEDIM + 1&gt;&gt; <em class="property">const</em> &amp;<em>mat</em>, <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Array4&lt;<a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Real <em class="property">const</em>&gt; <em class="property">const</em> &amp;<em>b</em>, <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Real <em>beta</em>, <em class="property">const</em> <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Real *<em>dx</em>, int <em>idir</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HypreABec6hbcoefERKN5amrex3BoxERKN5amrex6Array4IN5amrex8GpuArrayIN5amrex4RealEXpl14AMREX_SPACEDIML1EEEEEERKN5amrex6Array4IKN5amrex4RealEEEN5amrex4RealEPKN5amrex4RealEi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N9HypreABec5hbmatERKN5amrex3BoxERKN5amrex6Array4IN5amrex8GpuArrayIN5amrex4RealEXpl14AMREX_SPACEDIML1EEEEEEiiN5amrex4RealERKN5amrex6Array4IKiEERKN5amrex6Array4IKN5amrex4RealEEEN5amrex4RealEPKN5amrex4RealE">
+<span id="_CPPv3N9HypreABec5hbmatERKN5amrex3BoxERKN5amrex6Array4IN5amrex8GpuArrayIN5amrex4RealEXpl14AMREX_SPACEDIML1EEEEEEiiN5amrex4RealERKN5amrex6Array4IKiEERKN5amrex6Array4IKN5amrex4RealEEEN5amrex4RealEPKN5amrex4RealE"></span><span id="_CPPv2N9HypreABec5hbmatERKN5amrex3BoxERKN5amrex6Array4IN5amrex8GpuArrayIN5amrex4RealEXAMREX_SPACEDIM + 1EEEEEiiN5amrex4RealERKN5amrex6Array4IKiEERKN5amrex6Array4IKN5amrex4RealEEEN5amrex4RealEPKN5amrex4RealE"></span><span id="HypreABec::hbmat__amrex::BoxCR.amrex::Array4:amrex::GpuArray:amrex::Real.AMREX_SPACEDIM-+-1::CR.i.i.amrex::Real.amrex::Array4:iC:CR.amrex::Array4:amrex::RealC:CR.amrex::Real.amrex::RealCP"></span><span class="target" id="classHypreABec_1a1fab3cc52f1b535600c50b5a9180fe18"></span>void <code class="sig-name descname">hbmat</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Box &amp;<em>bx</em>, <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Array4&lt;<a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::GpuArray&lt;<a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Real, AMREX_SPACEDIM + 1&gt;&gt; <em class="property">const</em> &amp;<em>mat</em>, int <em>cdir</em>, int <em>bct</em>, <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Real <em>bcl</em>, <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Array4&lt;int <em class="property">const</em>&gt; <em class="property">const</em> &amp;<em>mask</em>, <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Array4&lt;<a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Real <em class="property">const</em>&gt; <em class="property">const</em> &amp;<em>b</em>, <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Real <em>beta</em>, <em class="property">const</em> <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Real *<em>dx</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HypreABec5hbmatERKN5amrex3BoxERKN5amrex6Array4IN5amrex8GpuArrayIN5amrex4RealEXpl14AMREX_SPACEDIML1EEEEEEiiN5amrex4RealERKN5amrex6Array4IKiEERKN5amrex6Array4IKN5amrex4RealEEEN5amrex4RealEPKN5amrex4RealE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N9HypreABec6hbmat3ERKN5amrex3BoxEiiRKN5amrex6Array4IN5amrex8GpuArrayIN5amrex4RealEXpl14AMREX_SPACEDIML1EEEEEEiiRKN5amrex6Array4IKiEEN5amrex4RealERKN5amrex6Array4IKiEERKN5amrex6Array4IKN5amrex4RealEEEN5amrex4RealERKN5amrex12GeometryDataEN5amrex4RealERKN5amrex6Array4IKN5amrex4RealEEE">
+<span id="_CPPv3N9HypreABec6hbmat3ERKN5amrex3BoxEiiRKN5amrex6Array4IN5amrex8GpuArrayIN5amrex4RealEXpl14AMREX_SPACEDIML1EEEEEEiiRKN5amrex6Array4IKiEEN5amrex4RealERKN5amrex6Array4IKiEERKN5amrex6Array4IKN5amrex4RealEEEN5amrex4RealERKN5amrex12GeometryDataEN5amrex4RealERKN5amrex6Array4IKN5amrex4RealEEE"></span><span id="_CPPv2N9HypreABec6hbmat3ERKN5amrex3BoxEiiRKN5amrex6Array4IN5amrex8GpuArrayIN5amrex4RealEXAMREX_SPACEDIM + 1EEEEEiiRKN5amrex6Array4IKiEEN5amrex4RealERKN5amrex6Array4IKiEERKN5amrex6Array4IKN5amrex4RealEEEN5amrex4RealERKN5amrex12GeometryDataEN5amrex4RealERKN5amrex6Array4IKN5amrex4RealEEE"></span><span id="HypreABec::hbmat3__amrex::BoxCR.i.i.amrex::Array4:amrex::GpuArray:amrex::Real.AMREX_SPACEDIM-+-1::CR.i.i.amrex::Array4:iC:CR.amrex::Real.amrex::Array4:iC:CR.amrex::Array4:amrex::RealC:CR.amrex::Real.amrex::GeometryDataCR.amrex::Real.amrex::Array4:amrex::RealC:CR"></span><span class="target" id="classHypreABec_1a4a42c01048a853cd5f0a3a2b6db3c3fb"></span>void <code class="sig-name descname">hbmat3</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Box &amp;<em>bx</em>, int <em>ori_lo</em>, int <em>idir</em>, <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Array4&lt;<a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::GpuArray&lt;<a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Real, AMREX_SPACEDIM + 1&gt;&gt; <em class="property">const</em> &amp;<em>mat</em>, int <em>cdir</em>, int <em>bctype</em>, <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Array4&lt;int <em class="property">const</em>&gt; <em class="property">const</em> &amp;<em>tf</em>, <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Real <em>bcl</em>, <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Array4&lt;int <em class="property">const</em>&gt; <em class="property">const</em> &amp;<em>mask</em>, <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Array4&lt;<a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Real <em class="property">const</em>&gt; <em class="property">const</em> &amp;<em>b</em>, <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Real <em>beta</em>, <em class="property">const</em> <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::GeometryData &amp;<em>geomdata</em>, <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Real <em>c</em>, <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Array4&lt;<a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Real <em class="property">const</em>&gt; <em class="property">const</em> &amp;<em>spa</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HypreABec6hbmat3ERKN5amrex3BoxEiiRKN5amrex6Array4IN5amrex8GpuArrayIN5amrex4RealEXpl14AMREX_SPACEDIML1EEEEEEiiRKN5amrex6Array4IKiEEN5amrex4RealERKN5amrex6Array4IKiEERKN5amrex6Array4IKN5amrex4RealEEEN5amrex4RealERKN5amrex12GeometryDataEN5amrex4RealERKN5amrex6Array4IKN5amrex4RealEEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
 <dt id="_CPPv4N9HypreABec11setupSolverEN5amrex4RealEN5amrex4RealEi">
 <span id="_CPPv3N9HypreABec11setupSolverEN5amrex4RealEN5amrex4RealEi"></span><span id="_CPPv2N9HypreABec11setupSolverEN5amrex4RealEN5amrex4RealEi"></span><span id="HypreABec::setupSolver__amrex::Real.amrex::Real.i"></span><span class="target" id="classHypreABec_1ad68087a481a5d3dc276f733ae511e54b"></span>void <code class="sig-name descname">setupSolver</code><span class="sig-paren">(</span><a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Real <em>_reltol</em>, <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Real <em>_abstol</em>, int <em>maxiter</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HypreABec11setupSolverEN5amrex4RealEN5amrex4RealEi" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Three steps separated so that multiple calls to solve can be made</p>
@@ -438,6 +462,16 @@
 </dl>
 </p>
 </dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N9HypreABec5hbvecERKN5amrex3BoxERKN5amrex6Array4IN5amrex4RealEEEiiiN5amrex4RealERKN5amrex6Array4IKN5amrex4RealEEERKN5amrex6Array4IKiEERKN5amrex6Array4IKN5amrex4RealEEEN5amrex4RealEPKN5amrex4RealE">
+<span id="_CPPv3N9HypreABec5hbvecERKN5amrex3BoxERKN5amrex6Array4IN5amrex4RealEEEiiiN5amrex4RealERKN5amrex6Array4IKN5amrex4RealEEERKN5amrex6Array4IKiEERKN5amrex6Array4IKN5amrex4RealEEEN5amrex4RealEPKN5amrex4RealE"></span><span id="_CPPv2N9HypreABec5hbvecERKN5amrex3BoxERKN5amrex6Array4IN5amrex4RealEEEiiiN5amrex4RealERKN5amrex6Array4IKN5amrex4RealEEERKN5amrex6Array4IKiEERKN5amrex6Array4IKN5amrex4RealEEEN5amrex4RealEPKN5amrex4RealE"></span><span id="HypreABec::hbvec__amrex::BoxCR.amrex::Array4:amrex::Real:CR.i.i.i.amrex::Real.amrex::Array4:amrex::RealC:CR.amrex::Array4:iC:CR.amrex::Array4:amrex::RealC:CR.amrex::Real.amrex::RealCP"></span><span class="target" id="classHypreABec_1a6f4b59a8cb06d7c740cdbc37266e6ba9"></span>void <code class="sig-name descname">hbvec</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Box &amp;<em>bx</em>, <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Array4&lt;<a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Real&gt; <em class="property">const</em> &amp;<em>vec</em>, int <em>cdir</em>, int <em>bct</em>, int <em>bho</em>, <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Real <em>bcl</em>, <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Array4&lt;<a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Real <em class="property">const</em>&gt; <em class="property">const</em> &amp;<em>bcval</em>, <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Array4&lt;int <em class="property">const</em>&gt; <em class="property">const</em> &amp;<em>mask</em>, <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Array4&lt;<a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Real <em class="property">const</em>&gt; <em class="property">const</em> &amp;<em>b</em>, <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Real <em>beta</em>, <em class="property">const</em> <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Real *<em>dx</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HypreABec5hbvecERKN5amrex3BoxERKN5amrex6Array4IN5amrex4RealEEEiiiN5amrex4RealERKN5amrex6Array4IKN5amrex4RealEEERKN5amrex6Array4IKiEERKN5amrex6Array4IKN5amrex4RealEEEN5amrex4RealEPKN5amrex4RealE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N9HypreABec6hbvec3ERKN5amrex3BoxEiiRKN5amrex6Array4IN5amrex4RealEEEiiRKN5amrex6Array4IKiEEiN5amrex4RealERKN5amrex6Array4IKN5amrex4RealEEERKN5amrex6Array4IKiEERKN5amrex6Array4IKN5amrex4RealEEEN5amrex4RealERKN5amrex12GeometryDataE">
+<span id="_CPPv3N9HypreABec6hbvec3ERKN5amrex3BoxEiiRKN5amrex6Array4IN5amrex4RealEEEiiRKN5amrex6Array4IKiEEiN5amrex4RealERKN5amrex6Array4IKN5amrex4RealEEERKN5amrex6Array4IKiEERKN5amrex6Array4IKN5amrex4RealEEEN5amrex4RealERKN5amrex12GeometryDataE"></span><span id="_CPPv2N9HypreABec6hbvec3ERKN5amrex3BoxEiiRKN5amrex6Array4IN5amrex4RealEEEiiRKN5amrex6Array4IKiEEiN5amrex4RealERKN5amrex6Array4IKN5amrex4RealEEERKN5amrex6Array4IKiEERKN5amrex6Array4IKN5amrex4RealEEEN5amrex4RealERKN5amrex12GeometryDataE"></span><span id="HypreABec::hbvec3__amrex::BoxCR.i.i.amrex::Array4:amrex::Real:CR.i.i.amrex::Array4:iC:CR.i.amrex::Real.amrex::Array4:amrex::RealC:CR.amrex::Array4:iC:CR.amrex::Array4:amrex::RealC:CR.amrex::Real.amrex::GeometryDataCR"></span><span class="target" id="classHypreABec_1a0f07b230ec86db414d97f46d0f1a7d4a"></span>void <code class="sig-name descname">hbvec3</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Box &amp;<em>bx</em>, int <em>ori_lo</em>, int <em>idir</em>, <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Array4&lt;<a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Real&gt; <em class="property">const</em> &amp;<em>vec</em>, int <em>cdir</em>, int <em>bct</em>, <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Array4&lt;int <em class="property">const</em>&gt; <em class="property">const</em> &amp;<em>tf</em>, int <em>bho</em>, <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Real <em>bcl</em>, <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Array4&lt;<a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Real <em class="property">const</em>&gt; <em class="property">const</em> &amp;<em>bcval</em>, <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Array4&lt;int <em class="property">const</em>&gt; <em class="property">const</em> &amp;<em>mask</em>, <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Array4&lt;<a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Real <em class="property">const</em>&gt; <em class="property">const</em> &amp;<em>b</em>, <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::Real <em>beta</em>, <em class="property">const</em> <a class="reference internal" href="../file/Castro__util_8H.html#_CPPv45amrex" title="amrex">amrex</a>::GeometryData &amp;<em>geomdata</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HypreABec6hbvec3ERKN5amrex3BoxEiiRKN5amrex6Array4IN5amrex4RealEEEiiRKN5amrex6Array4IKiEEiN5amrex4RealERKN5amrex6Array4IKN5amrex4RealEEERKN5amrex6Array4IKiEERKN5amrex6Array4IKN5amrex4RealEEEN5amrex4RealERKN5amrex12GeometryDataE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
 
 </div>
 <div class="breathe-sectiondef docutils container">
@@ -580,37 +614,29 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="classHypreExtMultiABec.html" class="btn btn-neutral float-right" title="Class HypreExtMultiABec" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="classGravity.html" class="btn btn-neutral float-left" title="Class Gravity" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="classHypreExtMultiABec.html" class="btn btn-neutral float-right" title="Class HypreExtMultiABec" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="classGravity.html" class="btn btn-neutral float-left" title="Class Gravity" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2018-2020, Castro development tem
+        &#169; Copyright 2018-2020, Castro development tem.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
